@@ -1,40 +1,26 @@
 import React, { Component } from 'react';
-import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import ImageCarousel from './components/Body/ImageCarousel';
-import Footer from './components/Footer/Footer';
-// import HeaderButton from './components/Button/HeaderButton';
+import { NavLink } from 'react-router-dom';
+import Router from './Router';
+
+import logo from './data/logo.jpg'
+
+const Navigation = (props) => <nav>
+  <img className= 'logo' src= {logo} />
+  <ul className= 'header-button' >
+    <button><NavLink to='/'>Home</NavLink></button>
+    <button><NavLink to='/cart'>Cart</NavLink></button>
+    <button><NavLink to='/store'>Cart</NavLink></button>
+  </ul>
+</nav>
 
 class App extends Component {
-
-// state = {
-//   user: {
-//     name: '',
-//     // password: '',
-//     // staff: boolean,
-//   }
-//   cart: {
-//     // Should I make all these their own or batch?
-//     items: [
-//       {
-//
-//       }
-//     ],
-//     price:
-//     total: 0,
-//     // Should this be set to 0 or null as default?
-//
-//   }
-// }
-
   render() {
     return (
-      <div className="App">
-        <NavBar />
-        <ImageCarousel />
-        <Footer />
-      </div>
-    );
+    <div className='page-container'>
+    <Navigation />
+      <Router />
+    </div>
+  );
   }
 }
 

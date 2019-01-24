@@ -1,0 +1,91 @@
+{
+  "products": [{
+        "id": 1,
+        "name": "Classic Single",
+        "description": "Maurice's classic single with cheese.",
+        "keywords": [
+          "single",
+          "hamburger"
+        ],
+        "image": "hamburger-1.jpg",
+        "price": 4.99
+      },
+      {
+        "id": 2,
+        "name": "Smash Burger",
+        "description": "We heard they were popular, so here we are.",
+        "keywords": [
+          "single",
+          "smashburger"
+        ],
+        "image": "hamburger-2.jpg",
+        "price": 5.99
+      },
+      {
+        "id": 3,
+        "name": "Bacon Smokehouse",
+        "description": "Single patty, bacon, and BBQ sauce on our toiasted sesame bun.",
+        "keywords": [
+          "single",
+          "bacon",
+          "bbq"
+        ],
+        "image": "hamburger-3.jpg",
+        "price": 6.99
+      },
+      {
+        "id": 4,
+        "name": "Squid Ink Burger",
+        "description": "Weird but delicious surf 'n turf.",
+        "keywords": [
+          "single",
+          "squid ink"
+        ],
+        "image": "hamburger-4.jpg",
+        "price": 7.99
+      },
+      {
+        "id": 5,
+        "name": "Crispy Chicken Sandwich",
+        "description": "Classic fried chicken sandwich.",
+        "keywords": [
+          "chicken"
+        ],
+        "image": "chickenSandwich-5.jpg",
+        "price": 5.99
+      },
+      {
+        "id": 6,
+        "name": "Spicy Chicken Sandwich",
+        "description": "Fried chicken and hot sauce.",
+        "keywords": [
+          "chicken",
+          "spicy"
+        ],
+        "image": "chickenSandwich-6.jpg",
+        "price": 6.99
+      },
+      {
+        "id": 7,
+        "name": "Grilled Chicken Sandwich",
+        "description": "The healthiest thing in the world.",
+        "keywords": [
+          "chicken",
+          "grilled"
+        ],
+        "image": "chickenSandwich-7.jpg",
+        "price": 5.99
+      },
+      {
+        "id": 8,
+        "name": "Chicken Strips",
+        "description": "Crispy and juicy chicken strips.",
+        "keywords": [
+          "chicken",
+          "strip"
+        ],
+        "image": "chickenStrips-8.jpg",
+        "price": 5.99
+      }
+    ]
+  }
