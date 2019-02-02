@@ -1,6 +1,8 @@
 import React from 'react'
 import ProductListItem from './product-list-item'
 import { connect } from 'react-redux'
+
+import * as $ from 'axios'
 // import { cartItemsWithQuantities } from '../cart';
 
 
@@ -32,9 +34,11 @@ function mapDispatchToProps(dispatch) {
     },
     removeFromCart: (item) => {
       dispatch({ type: 'REMOVE', payload: item })
-    }
+    },
+    submitCart: (cart) => {
+      dispatch({ type: 'SUBMIT', payload:cart})
   }
 }
-
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductListing)

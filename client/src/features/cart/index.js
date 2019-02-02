@@ -1,5 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import axios from 'axios'
+
+import SubmitButton from '../product-listing/submitButton'
 
 const sort = items => {
   return items.sort((a, b) => {
@@ -8,6 +11,8 @@ const sort = items => {
     }
   });
 };
+
+
 
 // function sort(items) {
 //   return items.sort((a, b) => a.id < b.id)
@@ -22,12 +27,20 @@ const sort = items => {
 //   }, [])
 // }
 
+
 function cart(props) {
+  let total = 0;
+props.cart.forEach(i =>{
+  total += i.price * i.quantity;
+
+})
+  // console.log(props);
   return <table>
   <thead>
   <tr>
   <th>Item</th>
   <th>Quantity</th>
+  <th>Price</th>
   <th></th>
   <th></th>
   </tr>
@@ -36,7 +49,8 @@ function cart(props) {
   {
     sort(props.cart).map(item => <tr>
       <td>{ item.name }</td>
-      <td>{ item.quantity }</td>
+      <td className="cartQuantity">{ item.quantity }</td>
+      <td>${ item.price }</td>
       <td>
         <button
         onClick={() => props.addToCart(item)}
@@ -56,9 +70,22 @@ function cart(props) {
       </td>
     </tr>
   )}
+  <tr>
+    <th>
+Total
+    </th>
+    <td>
+    </td>
+    <td>
+    ${parseFloat(total).toFixed(2)}
+    </td>
+    <SubmitButton />
+  </tr>
   </tbody>
   </table>
 }
+
+
 
 function mapStateToProps(state) {
   return{

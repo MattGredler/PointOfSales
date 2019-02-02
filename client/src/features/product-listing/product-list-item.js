@@ -13,7 +13,7 @@ export default function ProductListItem(props) {
     alt= "https://thumbs.dreamstime.com/z/error-press-ctrl-alt-del-blackboard-chalk-write-89539177.jpg"
     height={100}
     title={ props.product.name }
-    src={`/products/${props.product.image}`}
+    src={`${props.product.image}`}
      />
      <div><strong>{ props.product.name }</strong></div>
      <div>{ props.product.description }</div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Router from './Router';
+import * as $ from 'axios'
 
 import logo from './data/logo.jpg'
 
@@ -14,6 +15,20 @@ const Navigation = (props) => <nav>
 </nav>
 
 class App extends Component {
+  state = {
+    products: [],
+  }
+  getItems = () => {
+    $.get('/api/item')
+      .then((result) => {
+        console.log(result.data)
+        // console.log(result.data[i].products)
+        this.setState({ itemList: result.data })
+      })
+  };
+  componentDidMount() {
+    this.getItems();
+  }
   render() {
     return (
     <div className='page-container'>

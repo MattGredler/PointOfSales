@@ -2,6 +2,11 @@ const cartWithoutItem = (cart, item)  => cart.filter(cartItem => cartItem.id !==
 
 const itemInCart = (cart, item) => cart.filter(cartItem => cartItem.id === item.id)[0]
 
+const submitCart = (cart, item) => {
+  // const submittedCart = state.cart;
+  return [ ...itemInCart(cart, item) ]
+}
+
 const addToCart = (cart, item ) => {
   const cartItem = itemInCart(cart, item)
   return cartItem ===undefined
@@ -19,6 +24,13 @@ const removeAllFromCart = (cart, item) => {
   return [ ...cartWithoutItem(cart, item) ]
 }
 
+// const submitCart = (cart, item) => {
+  // const submittedCart = state.cart;
+  // return [ ...itemInCart(cart, item) ]
+// }
+
+// const getTotal???///????
+
 const cartReducer = (state=[], action) => {
   switch(action.type) {
     case 'ADD':
@@ -29,6 +41,9 @@ const cartReducer = (state=[], action) => {
 
     case 'REMOVE_ALL':
     return removeAllFromCart(state, action.payload)
+
+    // case 'SUBMIT':
+    // return submitCart(state, action.payload)
 
     default:
     return state;
